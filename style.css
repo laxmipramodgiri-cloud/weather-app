@@ -1,0 +1,238 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(#74ebd5,#9face6);
+transition:0.3s;
+}
+
+
+.container{
+width:400px;
+padding:25px;
+background:white;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px gray;
+}
+
+
+.mode-btn{
+padding:10px 15px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+background:#222;
+color:white;
+}
+
+
+h1{
+margin:15px;
+}
+
+
+.search-box{
+display:flex;
+gap:10px;
+margin:20px 0;
+}
+
+
+.search-box input{
+width:70%;
+padding:12px;
+border-radius:10px;
+border:1px solid gray;
+}
+
+
+.search-box button{
+width:30%;
+border:none;
+border-radius:10px;
+background:#007bff;
+color:white;
+cursor:pointer;
+}
+
+
+.weather-box img{
+width:90px;
+}
+
+
+#temperature{
+font-size:35px;
+margin:10px;
+}
+
+
+.details{
+margin-top:20px;
+text-align:left;
+}
+
+
+.details p{
+padding:8px;
+border-bottom:1px solid #ddd;
+}
+
+
+.forecast{
+display:flex;
+gap:10px;
+overflow-x:auto;
+margin-top:15px;
+}
+
+
+.forecast-card{
+min-width:100px;
+padding:10px;
+background:#e8f1ff;
+border-radius:15px;
+}
+
+
+.forecast-card img{
+width:50px;
+}
+
+
+/* Dark Mode */
+
+.dark{
+background:#111;
+}
+
+
+.dark .container{
+background:#222;
+color:white;
+}
+
+
+.dark .details p{
+border-color:#555;
+}
+
+
+.dark input{
+background:#333;
+color:white;
+}
+
+
+.dark .forecast-card{
+background:#333;
+}
+/* Responsive Design */
+
+@media(max-width:600px){
+
+.container{
+width:90%;
+padding:20px;
+}
+
+
+h1{
+font-size:26px;
+}
+
+
+.search-box{
+flex-direction:column;
+}
+
+
+.search-box input,
+.search-box button{
+width:100%;
+}
+
+
+#temperature{
+font-size:32px;
+}
+
+
+.details p{
+font-size:14px;
+}
+
+
+.forecast{
+gap:8px;
+}
+
+
+.forecast-card{
+min-width:90px;
+font-size:12px;
+}
+
+}
+/* Current Location Button */
+
+.location{
+margin-top:15px;
+}
+
+.location-btn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#28a745;
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.location-btn:hover{
+background:#218838;
+}
+
+.dark .location-btn{
+background:#00b894;
+}
+
+.dark .location-btn:hover{
+background:#00997a;
+}
+/* Loading Spinner */
+
+.loader{
+display:none;
+width:50px;
+height:50px;
+margin:20px auto;
+border:5px solid #ddd;
+border-top:5px solid #007bff;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+0%{
+transform:rotate(0deg);
+}
+100%{
+transform:rotate(360deg);
+}
+
+}

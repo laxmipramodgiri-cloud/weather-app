@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="mode-btn" onclick="toggleMode()">
+🌙 Dark / ☀️ Light
+</button>
+
+
+<h1>Weather App</h1>
+
+
+<div class="search-box">
+<div id="loader" class="loader"></div>
+<input type="text" id="city" placeholder="Enter city name">
+<button onclick="getWeather()">Search</button>
+</div>
+    
+
+<div class="location">
+<button class="location-btn" onclick="getCurrentLocation()">
+📍 Current Location
+</button>
+</div>
+
+<div class="weather-box">
+<h2 id="cityName">--</h2>
+<p id="dateTime">Date & Time</p>
+<img id="weatherIcon" src="" alt="Weather">
+
+<h3 id="temperature">-- °C</h3>
+
+<p id="condition">--</p>
+
+<div class="details">
+
+<p>🌡️ Feels Like: <span id="feels">--</span> °C</p>
+
+<p>⬇️ Min Temperature: <span id="minTemp">--</span> °C</p>
+
+<p>⬆️ Max Temperature: <span id="maxTemp">--</span> °C</p>
+
+<p>💧 Humidity: <span id="humidity">--</span>%</p>
+
+<p>💨 Wind Speed: <span id="wind">--</span> km/h</p>
+
+<p>🌀 Pressure: <span id="pressure">--</span> hPa</p>
+
+<p>👁️ Visibility: <span id="visibility">--</span> km</p>
+
+<p>🌅 Sunrise: <span id="sunrise">--</span></p>
+
+<p>🌇 Sunset: <span id="sunset">--</span></p>
+
+</div>
+
+<h2>5 Day Forecast</h2>
+
+<div id="forecast" class="forecast">
+
+<!-- Forecast cards will come here -->
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
